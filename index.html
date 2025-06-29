@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Intro -->
+  <div class="intro" id="intro">
+    <h1 id="intro-text"></h1>
+  </div>
+
+  <!-- App -->
+  <div class="app" id="app">
+    <header>
+      <h1>Smart Expense Tracker</h1>
+      <div class="toolbar">
+        <button id="toggle-mode">
+          <i id="theme-icon" class="fa-solid fa-moon"></i>
+          <span id="theme-label">Dark</span>
+        </button>
+        <div id="clock"></div>
+      </div>
+    </header>
+
+    <main>
+      <form id="expense-form">
+        <input type="text" id="desc" placeholder="Expense description" required />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <select id="category">
+          <option>Food</option>
+          <option>Travel</option>
+          <option>Utilities</option>
+          <option>Others</option>
+        </select>
+        <button type="submit">Add Expense</button>
+      </form>
+      <section>
+        <h2>My Expenses</h2>
+        <ul id="expense-list"></ul>
+      </section>
+      <button id="view-summary">View Today's Total</button>
+    </main>
+  </div>
+</body>
+</html>
